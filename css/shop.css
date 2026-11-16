@@ -1,0 +1,271 @@
+
+/* ==========================================
+   NOVARA - SHOP PAGE
+   Dark Premium Design
+========================================== */
+
+/* GLOBAL PAGE STYLING */
+
+body {
+    background:
+        linear-gradient(
+            110deg,
+            rgba(11, 11, 13, 0.95) 0%,
+            rgba(11, 11, 13, 0.65) 55%,
+            rgba(11, 11, 13, 0.15) 100%
+        ),
+        url("../hero-photo/hero-photo2.png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ==========================================
+   SHOP HERO
+========================================== */
+
+.shop-hero {
+    padding: 100px 8% 70px;
+    text-align: center;
+    background: linear-gradient(
+        180deg,
+        #191919,
+        #111111
+    );
+}
+
+.shop-hero .section-heading p:first-child {
+    color: #999999;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.shop-hero h1 {
+    color: #ffffff;
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: 500;
+    letter-spacing: -2px;
+}
+
+.shop-hero h1 span {
+    color: #999999;
+}
+
+.shop-hero .hero-description {
+    color: #999999;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 450px;
+    margin: 20px auto 0;
+}
+
+/* ==========================================
+   SHOP SECTION
+========================================== */
+
+.shop-section {
+    padding: 50px 8% 100px;
+}
+
+.shop-section .shop-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 35px;
+}
+
+.shop-section .shop-heading p {
+    color: #999999;
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.shop-section .shop-heading h2 {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.shop-section .shop-heading span {
+    color: #888888;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* ==========================================
+   PRODUCT GRID
+========================================== */
+
+.shop-section .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* ==========================================
+   PRODUCT CARD
+========================================== */
+
+.shop-section .product-card {
+    min-width: 0;
+    background: #191919;
+    border: 1px solid #292929;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.shop-section .product-card:hover {
+    transform: translateY(-6px);
+    border-color: #555555;
+}
+
+/* ==========================================
+   PRODUCT IMAGE
+========================================== */
+
+.shop-section .product-image {
+    height: 230px;
+    position: relative;
+    overflow: hidden;
+    background: #222222;
+}
+
+.shop-section .product-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.shop-section .product-card:hover .product-image img {
+    transform: scale(1.07);
+}
+
+.shop-section .product-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 2;
+    background: #ffffff;
+    color: #111111;
+    padding: 7px 10px;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+/* ==========================================
+   PRODUCT INFORMATION
+========================================== */
+
+.shop-section .product-info {
+    padding: 20px 16px;
+}
+
+.shop-section .product-category {
+    color: #999999;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.shop-section .product-info h3 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 9px;
+}
+
+.shop-section .product-description {
+    color: #888888;
+    font-size: 11px;
+    line-height: 1.6;
+    min-height: 35px;
+}
+
+/* ==========================================
+   PRODUCT PRICE AND LINK
+========================================== */
+
+.shop-section .product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #333333;
+}
+
+.shop-section .price {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.shop-section .product-bottom a {
+    color: #aaaaaa;
+    font-size: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.shop-section .product-bottom a:hover {
+    color: #ffffff;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN - TABLET
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .shop-section .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN - MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .shop-hero {
+        padding: 75px 5% 55px;
+    }
+
+    .shop-section {
+        padding: 35px 5% 70px;
+    }
+
+    .shop-section .product-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .shop-section .product-image {
+        height: 260px;
+    }
+
+    .shop-section .shop-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .shop-section .shop-heading h2 {
+        font-size: 23px;
+    }
+
+}
